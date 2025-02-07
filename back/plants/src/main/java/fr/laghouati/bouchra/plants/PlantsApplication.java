@@ -1,13 +1,13 @@
-package fr.laghouati.bouchra.plantes;
+package fr.laghouati.bouchra.plants;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class PlantesApplication {
+public class PlantsApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(PlantesApplication.class, args);
+		SpringApplication.run(PlantsApplication.class, args);
 	}
 
 }
