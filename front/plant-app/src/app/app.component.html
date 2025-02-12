@@ -24,35 +24,31 @@
         </div>
         <div class="navbar-center hidden lg:flex">
           <ul class="menu menu-horizontal px-1">
-            <li><a>Item 1</a></li>
-            <li>
-              <details>
-                <summary>Parent</summary>
-                <ul class="p-2">
-                  <li><a>Submenu 1</a></li>
-                  <li><a>Submenu 2</a></li>
-                </ul>
-              </details>
+            <li><a>Homepage</a></li>
+            <li><a>About us</a></li>
+            <li><a>About us</a></li>
+            <li class="dropdown">
+              <div tabindex="0" role="button"> Our plant selection </div>
+              <ul tabindex="0" class="menu dropdown-content z-[1] bg-base-100 p-2 rounded-box shadow w-36">
+                <li><a href="#">Indoor</a></li>
+                <li><a href="#">Outdoor</a></li>
+              </ul>
             </li>
-            <li><a>Item 3</a></li>
+           
           </ul>
         </div>
         <div class="navbar-end">
             <div class="dropdown dropdown-end">
               <div tabindex="0" class="btn btn-ghost btn-circle avatar">
                 <div class="w-10 rounded-full">
-                  <img alt="User Avatar" src="https://media.licdn.com/dms/image/v2/D4E03AQHJ4VzFAXoj2Q/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1718739218019?e=2147483647&v=beta&t=uqUwjHzp1OiaqGKu36t9cmGsymRyxBe9UDfbeyd6hGE" />
+                  <img alt="User Avatar" src="https://cdn-icons-png.flaticon.com/512/2815/2815428.png" />
                 </div>
               </div>
               <ul tabindex="0" class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
                 <li>
-                  <a class="justify-between">
-                    Account
-                    <span class="badge">New</span>
-                  </a>
+                  <label for="auth_modal" class="btn">Signin / Up</label>
                 </li>
-                <li><a>Settings</a></li>
-                <li><a>Logout</a></li>
+                <!--  <li><a>Sign Up</a></li> -->
               </ul>
             </div>
           </div>
@@ -60,15 +56,47 @@
     
       
     <div class="bg-another-bg  bg-center min-h-screen">
-        
+     
         <div class="flex items-center justify-center min-h-screen  p-6">
-            <p class="text-4xl font-bold text-center text-white">
-              mAI Plant helps you keep track and take care of your plant's growth with sensors and AI.
-            </p>
-          </div>
+          <p class="text-4xl font-bold text-center text-white">
+            mAI Plant helps you keep track and take care of your plant's growth with sensors and AI.
+          </p>
+        </div>
+   
         
     </div>
-    
+   
+        <!-- Modal Toggle -->
+    <input type="checkbox" id="auth_modal" class="modal-toggle" />
+    <div class="modal">
+      <div class="modal-box">
+        <h3 class="text-lg font-bold text-center">Welcome!</h3>
+        <p class="py-4 text-center">Choose a method to sign in:</p>
+
+        <!-- Authentication Buttons -->
+        <div class="flex flex-col space-y-3">
+          <button class="btn btn-outline btn-primary flex items-center">
+            <img src="https://www.svgrepo.com/show/475656/google-color.svg" class="w-5 h-5 mr-2" alt="Google Logo" />
+            Continue with Google
+          </button>
+
+          <button class="btn btn-outline flex items-center">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Apple_logo_black.svg/625px-Apple_logo_black.svg.png" class="w-5 h-5 mr-2" alt="Apple Logo" />
+            Continue with Apple
+          </button>
+
+          <button class="btn btn-outline flex items-center">
+            <img src="https://cdn-icons-png.flaticon.com/512/6244/6244710.png" class="w-5 h-5 mr-2" alt="Email Icon" />
+            Continue with Email
+          </button>
+        </div>
+
+        <!-- Close Button -->
+        <div class="modal-action">
+          <label for="auth_modal" class="btn">Close</label>
+        </div>
+      </div>
+    </div>
 </section>
 <section>
     <div class="bg-custom-bg  bg-center min-h-screen">
