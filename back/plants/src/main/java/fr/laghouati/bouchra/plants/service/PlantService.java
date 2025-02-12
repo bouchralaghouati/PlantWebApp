@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
+import java.util.UUID;
 
 @Service
 @RequiredArgsConstructor
@@ -22,7 +23,7 @@ public class PlantService {
         return plantRepository.findAll();
     }
 
-    public Plant getPlantById(Integer id){
+    public Plant getPlantById(UUID id){
         Optional<Plant> optionalPlant = plantRepository.findById(id);
         if(optionalPlant.isPresent()){
             return optionalPlant.get();
@@ -55,7 +56,7 @@ public class PlantService {
         }
     }
 
-    public void deletePlantById (Integer id) {
+    public void deletePlantById (UUID id) {
         plantRepository.deleteById(id);
     }
 

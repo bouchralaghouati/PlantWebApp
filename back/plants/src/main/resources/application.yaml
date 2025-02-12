@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: plants
+
+  jackson:
+    property-naming-strategy: SNAKE_CASE
+
+  flyway:
+    locations: classpath:/db/migration
+    schemas: plants
+    baseline-on-migrate: true
+    enabled: true
+
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/plants?currentSchema=plants
+    username: postgres
+    password: root

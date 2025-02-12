@@ -13,6 +13,7 @@ import lombok.NoArgsConstructor;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.util.UUID;
 
 /**
  * An entity class represents a table in a relational database
@@ -26,8 +27,8 @@ import java.time.LocalDateTime;
 
 public class Plant {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    @GeneratedValue(strategy = GenerationType.UUID)
+    private UUID id;
     private String name;
     private Integer height;
     private LocalDate potChange;

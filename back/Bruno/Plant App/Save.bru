@@ -1,0 +1,20 @@
+meta {
+  name: Save
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://localhost:8080/plant/v1/
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "name": "ficus", 
+    "height": 120,
+    "pot_change": "2025-02-12",
+    "type": "INTERIEUR"
+  }
+}

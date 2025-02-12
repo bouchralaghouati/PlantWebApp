@@ -1,7 +1,6 @@
 package fr.laghouati.bouchra.plants.controller;
 
 import fr.laghouati.bouchra.plants.plant.Plant;
-import fr.laghouati.bouchra.plants.repository.PlantRepository;
 import fr.laghouati.bouchra.plants.service.PlantService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -9,12 +8,12 @@ import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.UUID;
 
 @RestController
 @RequestMapping("/plant/v1")
 @RequiredArgsConstructor
 @Validated
-
 public class PlantController {
     private final PlantService plantService;
     /**
@@ -61,7 +60,7 @@ public class PlantController {
      * @return a String message indicating plant record has been deleted successfully
      */
     @DeleteMapping("/{id}")
-    public ResponseEntity<String> deletePlantById(@PathVariable Integer id)
+    public ResponseEntity<String> deletePlantById(@PathVariable UUID id)
     {
         plantService.deletePlantById(id);
         return ResponseEntity.ok().body("Deleted plant successfully");
