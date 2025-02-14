@@ -24,19 +24,18 @@
         </div>
         <div class="navbar-center hidden lg:flex">
           <ul class="menu menu-horizontal px-1">
-            <li><a>Homepage</a></li>
-            <li><a>About us</a></li>
-            <li><a>About us</a></li>
+            <li><a routerLink="/home-component" routerLinkActive="active" ariaCurrentWhenActive="page">Homepage</a></li>
+            <li><a routerLink="/aboutus-component" routerLinkActive="active" ariaCurrentWhenActive="page">About us</a></li>
             <li class="dropdown">
               <div tabindex="0" role="button"> Our plant selection </div>
               <ul tabindex="0" class="menu dropdown-content z-[1] bg-base-100 p-2 rounded-box shadow w-36">
-                <li><a href="#">Indoor</a></li>
-                <li><a href="#">Outdoor</a></li>
+                <li><a routerLink="/indoorplants-component" routerLinkActive="active" ariaCurrentWhenActive="page">Indoor</a></li>
+                <li><a routerLink="/outdoorplants-component" routerLinkActive="active" ariaCurrentWhenActive="page">Outdoor</a></li>
               </ul>
             </li>
-           
           </ul>
         </div>
+        
         <div class="navbar-end">
             <div class="dropdown dropdown-end">
               <div tabindex="0" class="btn btn-ghost btn-circle avatar">
@@ -53,7 +52,7 @@
             </div>
           </div>
         </div>
-    
+        <router-outlet />
       
     <div class="bg-another-bg  bg-center min-h-screen">
      
