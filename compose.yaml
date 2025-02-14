@@ -1,0 +1,11 @@
+services:
+  front:
+    image: node:22
+    working_dir: /app
+    volumes:
+      - ./front/plant-app:/app
+    ports:
+      - "4200:4200"
+    entrypoint: [ "sh", "-c" ]
+    command:
+      - "npm install && npm run start-docker"
