@@ -9,3 +9,5 @@ services:
     entrypoint: [ "sh", "-c" ]
     command:
       - "npm install && npm run start-docker"
+    environment:
+      - CHOKIDAR_USEPOLLING=true
