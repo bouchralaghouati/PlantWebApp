@@ -1,0 +1,43 @@
+
+
+
+    
+    <h2>Add a plant</h2>
+    <form [formGroup]="addplant" (ngSubmit)="onSubmit()">
+        <div>
+            <label for="name">Plant's Name</label>
+            <input id="name" formControlName="name" />
+            <div *ngIf="addplant.get('name')?.invalid && addplant.get('name')?.touched">
+                Name of the plant is required
+            </div>
+        </div>
+        
+        <div>
+            <label for="height">Height of the Plant</label>
+            <input id="height" formControlName="height" />
+            <div *ngIf="addplant.get('height')?.invalid && addplant.get('height')?.touched">
+                Name of the plant is required
+            </div>
+        </div>
+        <div>
+            <label for="pot_change">When was the last time you changed the plant's pot ?</label>
+            <input id="pot_change" type="date" formControlName="pot_change" />
+            <div *ngIf="addplant.get('pot_change')?.invalid && addplant.get('pot_change')?.touched">
+              
+            </div>
+        </div>
+        
+        <div>
+            <label for="type">Is it an indoor or outdoor plant ?</label>
+            <input id="type" type="date" formControlName="type" />
+            <div *ngIf="addplant.get('type')?.invalid && addplant.get('type')?.touched">
+              
+            </div>
+        </div>
+        <button type="submit" [disabled]="addplant.invalid">Add</button>
+        
+    </form>
+
+
+
+
