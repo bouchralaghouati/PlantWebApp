@@ -3,6 +3,7 @@ import {AboutusComponent} from './aboutus/aboutus.component';
 import {HomeComponent} from './home/home.component';
 import {IndoorplantsComponent} from './indoorplants/indoorplants.component';
 import {OutdoorplantsComponent} from './outdoorplants/outdoorplants.component';
+import {AddplantComponent} from './addplant/addplant.component';
 
 
 
@@ -11,4 +12,5 @@ export const routes: Routes = [
     {path: 'home-component', component: HomeComponent},
     {path: 'indoorplants-component', component: IndoorplantsComponent},
     {path: 'outdoorplants-component', component: OutdoorplantsComponent},
+    {path: 'addplant-component', component: AddplantComponent},
 ];
