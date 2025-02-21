@@ -7,9 +7,9 @@
 
   <div class="navbar-center hidden lg:flex">
     <ul class="menu menu-horizontal px-1">
-      <li><a routerLink="" routerLinkActive="active" ariaCurrentWhenActive="page">Homepage</a></li>
+      <li><a routerLink="/" routerLinkActive="active" ariaCurrentWhenActive="page">Homepage</a></li>
       <li><a routerLink="/aboutus-component" routerLinkActive="active" ariaCurrentWhenActive="page">About us</a></li>
-      <li class="dropdown">
+      <li class="dropdown dropdown-hover">
         <div tabindex="0" role="button"> Our plant selection </div>
         <ul tabindex="0" class="menu dropdown-content z-[1] bg-base-100 p-2 rounded-box shadow w-36">
           <li><a routerLink="/indoorplants-component" routerLinkActive="active" ariaCurrentWhenActive="page">Indoor</a>
@@ -29,9 +29,7 @@
         </div>
       </div>
       <ul tabindex="0" class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-        <li>
-          <label for="auth_modal" class="btn">Signin / Up</label>
-        </li>
+        <li><a class="btn" routerLink="/login-component" routerLinkActive="active">Sign In | Up</a></li>
       </ul>
     </div>
   </div>
@@ -39,36 +37,3 @@
 
 <router-outlet />
 
-<!-- Modal Toggle -->
-<input type="checkbox" id="auth_modal" class="modal-toggle" />
-<div class="modal">
-  <div class="modal-box">
-    <h3 class="text-lg font-bold text-center">Welcome!</h3>
-    <p class="py-4 text-center">Choose a method to sign in:</p>
-
-    <!-- Authentication Buttons -->
-    <div class="flex flex-col space-y-3">
-      <button class="btn btn-outline btn-primary flex items-center">
-        <img src="https://www.svgrepo.com/show/475656/google-color.svg" class="w-5 h-5 mr-2" alt="Google Logo" />
-        Continue with Google
-      </button>
-
-      <button class="btn btn-outline flex items-center">
-        <img
-          src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Apple_logo_black.svg/625px-Apple_logo_black.svg.png"
-          class="w-5 h-5 mr-2" alt="Apple Logo" />
-        Continue with Apple
-      </button>
-
-      <button class="btn btn-outline flex items-center">
-        <img src="https://cdn-icons-png.flaticon.com/512/6244/6244710.png" class="w-5 h-5 mr-2" alt="Email Icon" />
-        Continue with Email
-      </button>
-    </div>
-
-    <!-- Close Button -->
-    <div class="modal-action">
-      <label for="auth_modal" class="btn">Close</label>
-    </div>
-  </div>
-</div>
