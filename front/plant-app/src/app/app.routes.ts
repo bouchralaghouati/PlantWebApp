@@ -10,7 +10,7 @@ import {LoginComponent} from './login/login.component';
 
 export const routes: Routes = [
     {path: 'aboutus-component', component: AboutusComponent},
-    {path: 'home-component', component: HomeComponent},
+    {path: '', component: HomeComponent},
     {path: 'indoorplants-component', component: IndoorplantsComponent},
     {path: 'outdoorplants-component', component: OutdoorplantsComponent},
     {path: 'addplant-component', component: AddplantComponent},
