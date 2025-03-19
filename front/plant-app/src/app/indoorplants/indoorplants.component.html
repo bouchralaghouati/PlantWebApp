@@ -1,1 +1,50 @@
-<p>indoorplants works!</p>
+<div class="relative h-screen w-screen">
+    <div class="absolute  inset-0 -z-10 h-full w-full bg-white [background:radial-gradient(125%_125%_at_50%_10%,#fff_40%,#63e_100%)]">
+        <div class="plant-gallery-container"></div>
+        <div class="plant-gallery">
+            <div class="plant-card">
+               <img src="https://fr-fr.bakker.com/cdn/shop/files/VIS_018129_1_BK_1705411387376.jpg?v=1705411425" alt="Plante verte" class="plant-image" />
+               <div class="plant-info">
+                  <h3 class="plant-title">Monstera</h3>
+                  <p class="plant-description">Une description courte de la plante qui donne des informations clés. 
+                    <button class="btn" onclick="my_modal_5.showModal()">Lire plus</button>
+                        <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+                        <div class="modal-box">
+                            <h3 class="text-lg font-bold">Hello!</h3>
+                            <p class="py-4">Press ESC key or click the button below to close</p>
+                            <div class="modal-action">
+                            <form method="dialog">
+                                <!-- if there is a button in form, it will close the modal -->
+                                <button class="btn">Close</button>
+                            </form>
+                            </div>
+                        </div>
+                        </dialog>
+               </div>
+            </div>
+            <!-- Répéter pour chaque plante -->
+            <div class="plant-card">
+                <img src="https://www.jardiner-malin.fr/wp-content/uploads/2023/01/ficus-benjamina.jpg" alt="Plante verte" class="plant-image" />
+                <div class="plant-info">
+                   <h3 class="plant-title">Ficus Benjamina</h3>
+                   <p class="plant-description">Une description courte de la plante qui donne des informations clés. <a href="#">Lire plus</a></p>
+                </div>
+            </div>
+            <div class="plant-card">
+                <img src="https://hortology.co.uk/cdn/shop/files/Tradescantia-zebrina-12x15cm-lisbon-Pot-White-13x13cm_1600x.jpg?v=1740584578" alt="Plante verte" class="plant-image" />
+                <div class="plant-info">
+                   <h3 class="plant-title">Wandering Jew</h3>
+                   <p class="plant-description">Une description courte de la plante qui donne des informations clés. <a href="#">Lire plus</a></p>
+                </div>
+            </div>
+            <div class="plant-card">
+                <img src="https://shrubz.us/wp-content/uploads/2015/04/Ficus_benjamina_featured.webp" alt="Plante verte" class="plant-image" />
+                <div class="plant-info">
+                   <h3 class="plant-title">Golden Ficus</h3>
+                   <p class="plant-description">Une description courte de la plante qui donne des informations clés. <a href="#">Lire plus</a></p>
+                </div>
+            </div>
+            
+         </div>
+    </div>
+</div>

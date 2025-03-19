@@ -4,10 +4,11 @@ import { HttpClient } from '@angular/common/http';
 import { RouterOutlet } from '@angular/router';
 import { RouterLink } from '@angular/router';
 import { RouterLinkActive } from '@angular/router';
+import { LoginComponent } from './login/login.component'; 
 
 @Component({
   selector: 'app-root',
-  imports: [CommonModule, RouterOutlet, RouterLink, RouterLinkActive],
+  imports: [CommonModule, RouterOutlet, RouterLink, RouterLinkActive, LoginComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

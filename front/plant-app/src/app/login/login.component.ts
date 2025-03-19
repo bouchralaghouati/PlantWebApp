@@ -1,29 +1,31 @@
-import { Component, inject } from '@angular/core';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatButtonModule } from '@angular/material/button';
-import { MatIconModule } from '@angular/material/icon';
-import { AuthGoogleService } from '../services/auth-google.service';
+import { Component, OnInit } from '@angular/core';
 
-const MODULES: any[] = [
-  MatButtonModule,
-  MatIconModule,
-  MatFormFieldModule,
-  FormsModule,
-  ReactiveFormsModule,
-];
+declare const google: any; // Declare the google object
 
 @Component({
   selector: 'app-login',
-  standalone: true,
-  imports: [...MODULES], // ✅ Ensure this is inside an array
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css'], // ✅ Correct property name
+  styleUrls: ['./login.component.css'],
 })
-export class LoginComponent {
-  private authService = inject(AuthGoogleService);
+export class LoginComponent implements OnInit {
+  clientId = '738401225774-5th4km5jnuhj6seiurdb8ri1iuo28p3k.apps.googleusercontent.com'; // Replace with your Client ID
 
-  signInWithGoogle() {
-    this.authService.login();
+  ngOnInit() {
+    google.accounts.id.initialize({
+      client_id: this.clientId,
+      callback: this.handleCredentialResponse.bind(this),
+      auto_select: false,
+      cancel_on_tap_outside: false,
+    });
+    google.accounts.id.renderButton(
+      document.getElementById('google-sign-in-button'),
+      { theme: 'outline', size: 'large' } // customization attributes
+    );
+    google.accounts.id.prompt(); // also display the One Tap dialog
+  }
+
+  handleCredentialResponse(response: any) {
+    console.log('Encoded JWT ID token: ' + response.credential);
+    // Here you can send the token to your backend for verification
   }
 }
