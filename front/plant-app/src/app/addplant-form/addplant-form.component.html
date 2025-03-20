@@ -1,0 +1,33 @@
+<h2>User Registration</h2>
+
+<form [formGroup]="addplantForm" (ngSubmit)="onSubmit()">
+  <!-- Username -->
+  <div>
+    <label for="name">name:</label>
+    <input id="name" formControlName="name" />
+    <div *ngIf="addplantForm.get('name')?.invalid && addplantForm.get('name')?.touched">
+      name is required.
+    </div>
+  </div>
+
+  <!-- Email -->
+  <div>
+    <label for="email">Email:</label>
+    <input id="email" formControlName="email" />
+    <div *ngIf="addplantForm.get('email')?.invalid && addplantForm.get('email')?.touched">
+      A valid email is required.
+    </div>
+  </div>
+
+  <!-- Password -->
+  <div>
+    <label for="password">Password:</label>
+    <input id="password" type="password" formControlName="password" />
+    <div *ngIf="addplantForm.get('password')?.invalid && addplantForm.get('password')?.touched">
+      Password must be at least 6 characters long.
+    </div>
+  </div>
+
+  <!-- Submit Button -->
+  <button type="submit" [disabled]="addplantForm.invalid">Register</button>
+</form>
