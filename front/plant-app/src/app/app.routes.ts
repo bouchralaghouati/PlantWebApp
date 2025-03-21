@@ -15,5 +15,5 @@ export const routes: Routes = [
     {path: 'indoorplants-component', component: IndoorplantsComponent},
     {path: 'outdoorplants-component', component: OutdoorplantsComponent},
     {path: 'login-component', component: LoginComponent},
-    {path: 'addplant-form-component', component: LoginComponent},
+    {path: 'addplant-form-component', component: AddplantFormComponent},
 ];
